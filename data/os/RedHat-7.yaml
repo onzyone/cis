@@ -1,1 +1,5 @@
 ---
+cis::redhat::rhel7::apply_rhel7_level_one_scored: false
+cis::redhat::rhel7::apply_rhel7_level_one_notscored: false
+cis::redhat::rhel7::apply_rhel7_level_two_scored: false
+cis::redhat::rhel7::apply_rhel7_level_two_notscored: false

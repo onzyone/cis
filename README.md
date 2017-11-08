@@ -9,6 +9,7 @@
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
+7. [Class Naming Rules](#ClassNamingRules)
 
 ## Tests
 
@@ -16,7 +17,7 @@
 
 ## Description
 
-This module will implement the CIS benchmark standards found on https://www.cisecurity.org/cis-benchmarks/ page.
+This module will implement the CIS benchmarks for security located on the cis webpage https://www.cisecurity.org/.
 
 The current version and OS's implemented:
 
@@ -44,7 +45,7 @@ If your most recent release breaks compatibility or requires particular steps fo
 
 ### Beginning with cis  
 
-The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
+`include cis`
 
 ## Usage
 
@@ -316,6 +317,6 @@ If you aren't using changelog, put your release notes here (though you should co
 
 ## Class Naming Rules
 
-`class::os::os_major_version::rule::cis_rule_number`
+`cis::$facts['os']['family']::$facts['os']['name']$facts['os']['release']['major']::rule_NUMBER`
 
-ie: `cis::rhel::7::rule::1_1_1_1` and `cis::windows::2012::rule::1_1_1_1`
+ie: `cis::redhat::rhel7::rule_1_1_1_1` and `cis::windows::windows2012R2::rule_1_1_1_1`

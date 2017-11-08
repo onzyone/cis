@@ -2,7 +2,7 @@
   "name": "onzyone-cis",
   "version": "0.0.1",
   "author": "Jason Chinsen",
-  "summary": "This module will implament the CIS security standards: https://www.cisecurity.org/",
+  "summary": "This module will implement the CIS benchmarks for security located on the cis webpage https://www.cisecurity.org/",
   "license": "Apache-2.0",
   "source": "https://github.com/onzyone/cis",
   "project_page": "https://github.com/onzyone/cis",
