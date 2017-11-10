@@ -7,17 +7,14 @@
 # @example
 #   include cis
 #
-# @param apply_rhel7_level_one_scored [Boolean] defalut is false, to apply pass true to the cis module
-# @param apply_rhel7_level_one_notscored [Boolean] defalut is false, to apply pass true to the cis module
-# @param apply_rhel7_level_two_scored [Boolean] defalut is false, to apply pass true to the cis module
-# @param apply_rhel7_level_two_notscored [Boolean] defalut is false, to apply pass true to the cis module
-#
-
+# @param $cis_version [Enum['v1', 'v2']]
 class cis (
-  Boolean $apply_rhel7_level_one_scored,
-  Boolean $apply_rhel7_level_one_notscored,
-  Boolean $apply_rhel7_level_two_scored,
-  Boolean $apply_rhel7_level_two_notscored,
+  Enum['v1', 'v2'] $cis_version
 ){
-
+  case $facts['os']['family'] {
+    'RedHat', 'CentOS': {
+      contain "cis::${facts['os']['family']}::${facts['os']['name']}${facts['os']['release']['major']}::${cis_version}"
+    }
+    default: {fail("Module ${module_name} is not supported on ${::operatingsystem}")}
+  }
 }
