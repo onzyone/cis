@@ -8,16 +8,9 @@
 #   include cis
 #
 # @param $cis_version [Enum['v1', 'v2']]
-# @param apply_rhel7_level_one_notscored [Boolean] defalut is false, to apply pass true to the cis module
-# @param apply_rhel7_level_two_scored [Boolean] defalut is false, to apply pass true to the cis module
-# @param apply_rhel7_level_two_notscored [Boolean] defalut is false, to apply pass true to the cis module
-#
-
 class cis (
   Enum['v1', 'v2'] $cis_version
 ){
-
-
   case $facts['os']['family'] {
     'RedHat', 'CentOS': {
       contain "cis::${facts['os']['family']}::${facts['os']['name']}${facts['os']['release']['major']}::${cis_version}"
