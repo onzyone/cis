@@ -81,4 +81,4 @@ If you aren't using changelog, put your release notes here (though you should co
 
 `module::$facts['os']['family']::$facts['os']['name']$facts['os']['release']['major']::cis_version::rule_NUMBER`
 
-ie: `cis::redhat::rhel7::v1::rule_1_1_1_1` or `cis::windows::windows2012R2::v1::rule_1_1_1_1`
+ie: `cis::redhat::redhat7::v1::rule_1_1_1_1` or `cis::windows::windows2012R2::v1::rule_1_1_1_1`

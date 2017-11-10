@@ -5,6 +5,12 @@ describe 'cis' do
     context "on #{os}" do
       let(:facts) { os_facts }
 
+      let :params do
+        {
+          cis_version: 'v1',
+        }
+      end
+
       it { is_expected.to compile }
     end
   end

@@ -1,4 +1,4 @@
 ---
-cis::redhat::rhel7::v1::rule_1_1_1::is_active: false
+cis::redhat::redhat7::v1::rule_1_1_1::is_active: false
 
-cis::redhat::rhel7::v2::rule_1_1_1_1::is_active: false
+cis::redhat::redhat7::v2::rule_1_1_1_1::is_active: false
