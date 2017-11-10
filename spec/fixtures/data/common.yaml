@@ -1,0 +1,6 @@
+---
+cis::cis_version: v1
+
+cis::redhat::rhel7::v1::rule_1_1_1::is_acitve: false
+
+cis::redhat::rhel7::v2::rule_1_1_1_1::is_acitve: false
