@@ -10,7 +10,7 @@ class cis::redhat::redhat7::v2::rule_1_1_1_1(
   Boolean $is_acitve = false
 ){
   if $is_acitve{
-   notify { "active inside ${module_name}":}
+    notify { "active inside ${module_name}":}
   }
   else {
     notify { "not active inside ${module_name}":}
