@@ -4,6 +4,7 @@ dist: trusty
 language: ruby
 cache: bundler
 before_install:
+  - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
   - bundle -v
   - rm Gemfile.lock || true
   - gem update --system
@@ -12,6 +13,7 @@ before_install:
   - bundle -v
 script:
   - 'bundle exec rake $CHECK'
+  - 'if $COMMITTER_EMAIL !~ /gmail.com/ warn(Invalid email. Update with your github email) end'
 bundler_args: --without system_tests
 rvm:
   - 2.4.1
