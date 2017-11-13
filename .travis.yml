@@ -13,7 +13,7 @@ before_install:
   - bundle -v
 script:
   - 'bundle exec rake $CHECK'
-  - 'if $COMMITTER_EMAIL !~ /gmail.com/ warn "Invalid email. Update with your github email" end'
+  - 'if COMMITTER_EMAIL !~ /gmail.com/ warn "Invalid email. Update with your github email" end'
 bundler_args: --without system_tests
 rvm:
   - 2.4.1
