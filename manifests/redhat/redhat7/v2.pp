@@ -1,6 +1,6 @@
 # cis::redhat::redhat7::v2
 #
-# A description of what this class does
+# This class will manage all CIS v2 rules
 #
 # @summary A short summary of the purpose of this class
 #
